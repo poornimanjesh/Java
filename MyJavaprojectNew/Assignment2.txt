@@ -1,0 +1,62 @@
+package collectionpractice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class Assignmentlinkedlist1 {
+	//Q: Identify the duplicate values in List?
+
+	public static void main(String[] args) {
+		
+		retainToSeeduplicates();
+	}
+	static void retainToSeeduplicates()
+	{
+		List<String> box = null;
+		List<String> bag = null;
+		try {
+			box = new ArrayList<String>();
+			box.add("pen");
+			box.add("pencil");
+			box.add("eraser");
+			
+			System.out.println("box contains :"+box);
+			
+			
+			bag = new ArrayList<String>();
+			bag.add("pen");
+			bag.add("eraser");
+			bag.add("water");
+			bag.add("book");
+			bag.add("kerchife");
+			
+			//Q: How to sort List without using built-in method?
+		     Collections.sort(bag);
+			 System.out.println("after sort: "+bag);
+			
+			
+			System.out.println("Bag contains :"+bag);
+			
+			if(box.retainAll(bag)) System.out.println("Box contains duplicate");
+			else System.out.println("its not contains duplicate");
+			System.out.println("these are duplicates:"+box); 
+			
+			
+		//Q: Remove the duplicate values in List?
+            bag.removeAll(box);
+		     System.out.println("contains unique values :"+bag); 
+		     
+			
+			
+		}catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally {
+			box = null;
+			bag = null;
+		}
+	}
+}

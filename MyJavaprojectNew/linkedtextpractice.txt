@@ -1,0 +1,73 @@
+package collectionpractice;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Linkedlistpractice2 {
+
+	public static void main(String[] args) {
+		linked_link();
+
+	}
+	static void linked_link()
+	{   
+		List<String> ob=null;
+		List<String> ob1=null;
+		try {
+			ob=new LinkedList<String>();
+			
+			ob.add("main");
+			ob.add("rain");
+			ob.add("main");
+			ob.add("jain");
+			ob.add("sain");
+			
+			ob1=new LinkedList<String>();
+			ob1.add("clay");
+			ob1.add("may");
+			ob1.add("pay");
+			ob1.add("jay");
+			ob1.add("caly");
+			System.out.println("********************addAll**********");
+			if(ob.addAll(3,ob1)==true)System.out.println("Added successfully");  //returning boolean
+			else System.out.println("its not successsfully added");
+			System.out.println(ob);       //3 val from ob |3 val ob1 mixing
+			
+			System.out.println(ob.addAll(ob1));
+			System.out.println(ob);   // returning value
+			
+			System.out.println("***************************remove(Index) remove(value)  clear() *********************************");
+			
+			System.out.println(ob.remove(4));  //it will remove dependece on index
+			System.out.println(ob.remove("sain"));  // returns boolean
+			ob1.clear();
+			System.out.println(ob1);
+			
+			
+			System.out.println("***************************r*********************************");
+			if (ob.contains("sain")==true)System.out.println("its contains sain");
+			else System.out.println("its not contains");   //since i removed befor its going to else part
+			
+			System.out.println("*************************isEmpty() ***********************************");
+			if(ob.isEmpty() && ob1.isEmpty()==true)System.out.println("both are empty");
+			else if (ob.isEmpty() || ob1.isEmpty()==true)System.out.println("one is empty and anthor one is not empty");
+			else System.out.println("both is not empty");
+			
+			System.out.println("*************************sort() ***********************************");
+			Collections.sort(ob);
+			System.out.println(ob);
+			
+			System.out.println("*************************//toArray() ***********************************"); 
+			}
+		catch (Exception e) {
+			System.out.println(e);
+		}finally
+		{
+			ob=null;
+			ob1=null;
+		}
+		
+		}
+
+}

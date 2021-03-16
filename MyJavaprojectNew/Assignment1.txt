@@ -1,0 +1,47 @@
+package collectionpractice;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class AssignmentLinkedlist {
+
+	public static void main(String[] args) {
+		//Q: Identify the First repeated value & last unique value in  a List?
+		//Q: How to sort List without using built-in method?
+		repeatedlastuniqueval();
+
+	}
+          static void   repeatedlastuniqueval()
+          {     LinkedList<String> ENgmovie=null;
+                
+        	  try {
+        		  ENgmovie  = new LinkedList<String>();
+        		  ENgmovie.add("Titanic");
+        		  ENgmovie.add("Behindhereye");
+        		  ENgmovie.add("lost");
+        		  ENgmovie.add("Behindhereye");
+        		  ENgmovie.add("starsinthesky");
+        		  ENgmovie.add("lost");
+        		  ENgmovie.add("myhappyness");
+        		  ENgmovie.add("stars in the sky");
+        		  ENgmovie .removeFirstOccurrence("Behindhereye");
+      			System.out.println(ENgmovie);
+      			
+      			
+      			 ENgmovie.removeLastOccurrence("starsinthesky");
+      			System.out.println(ENgmovie);
+        		  
+        	  }
+        	  
+          catch(Exception e)
+  		{
+  			System.out.println(e);
+  		}
+  		finally
+  		{
+  			 ENgmovie=null;
+             
+  		} 
+        	  
+      }
+}

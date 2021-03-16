@@ -1,0 +1,66 @@
+package day3;
+
+public class Strings {
+
+	public static void main(String[] args) {
+		String s="Welcome";
+		String s1=" to java  "; 
+
+		//convertingcase
+		String s3="LONDON";
+		System.out.println(s3.toLowerCase());
+		
+		String s4="newyork";
+		System.out.println(s4.toUpperCase());
+		
+		
+		System.out.println(s.length());  //length of the string
+		
+		
+		
+		//substring
+		System.out.println(s.substring(1,4)); //starting index always start with 0 and ending index start with 1
+		System.out.println(s.substring(0,7));
+		
+		//charAt
+		System.out.println(s.charAt(4));  //returns character based on index number,index will start from 0
+		
+		//StartsWith endsWith
+		System.out.println(s.startsWith("Wel"));  //its k sencitive returns boolean
+		System.out.println(s.startsWith("ome"));  //its k sencitive returns boolean
+		
+        //contains
+		System.out.println(s.contains("Wel")); //it check in s for this letter  ,its k sensitive we need to careful about uppercase and lower case
+		System.out.println(s.contains("wel")); //ans will be false i mentioned lower case intentionally
+
+		 //indexof LastIndexof
+		System.out.println(s.indexOf('W',0));
+		System.out.println(s.lastIndexOf("Welcome",3));  //i didnt get this
+		
+		//trim
+	     System .out.println(s1.trim());  //it will remove the space before and after string not between the string
+	     
+	     //concate
+	     System.out.println(s.concat(s1)); // concat or join the strings together
+	     
+	   //replacing Character 
+		System.out.println(s.replace('o', 'i'));
+		System.out.println(s1.replaceAll("java","python"));   //replaces all occurrences of "Java" to "Python"
+		System.out.println(s.replaceFirst(s1, s));     // replace first string 
+			 
+		//Comparing string by using equals()
+		System.out.println(s.equals("Welcome")); //true
+		System.out.println(s.equals("Wel  come"));//false
+		System.out.println(s.equals("welcome"));// false
+		
+		//Comparing string by using equalsIgnoreCase() 
+		
+		System.out.println(s.equalsIgnoreCase("welcome")); // it will ignore the upper case and lower case
+		
+		
+		
+		
+
+	}
+
+}

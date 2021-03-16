@@ -1,0 +1,128 @@
+
+
+package javaclass1;
+
+public class Append {
+
+	public static void main(String[] args) {
+		append();
+		delete();
+		deleteCharAt();
+		insert();
+		reverse();
+		
+    }
+	static void append()
+	{
+		StringBuilder str = null;
+		StringBuilder result = null;
+		
+		try {
+			
+			str = new StringBuilder("Today is Tuesday");
+			str.append(" month marh");
+			result = str.append(" and also ");
+			str.append("year 2021");
+			System.out.println(result);
+			System.out.println(str);
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		} 
+		finally {
+			str=null;
+			result=null;
+		}
+		
+		
+		
+
+	}
+
+	static void delete()
+	{
+	StringBuilder str =null;
+	StringBuilder result =null;
+	try{
+		str = new StringBuilder("the LONDON");
+		result=str.delete(0, 3);
+		System.out.println(result);
+	}catch(Exception e)
+	{
+		System.out.println(e);
+		
+	}
+	finally {
+		str=null;
+		result=null;
+	}
+	}
+	
+	
+	static void deleteCharAt()
+
+	{
+		StringBuilder str =null;
+		StringBuilder result =null;
+		try {
+			str=new StringBuilder("myschoolisfarfromhere");
+			result=str.deleteCharAt(3);
+			System.out.println(result);
+			}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally {
+			str =null;
+		    result =null;
+			
+		}
+	}
+	
+	static void insert ()
+
+	{
+		StringBuilder str =null;
+		StringBuilder result =null;
+		try {
+			str=new StringBuilder("MYSORE");
+			result=str.insert(0,"CITY ");
+			System.out.println(result);
+			}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally {
+			str =null;
+		    result =null;
+			
+	}
+	}
+static void reverse()
+
+	{
+		StringBuilder str =null;
+		StringBuilder result =null;
+		try {
+			str=new StringBuilder("MYSORE");
+			result=str.reverse();
+			System.out.println(result);
+			}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		finally {
+		str =null;
+		result =null;
+			
+	}
+
+
+
+
+}
+}
